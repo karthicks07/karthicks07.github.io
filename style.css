@@ -41,7 +41,7 @@ nav ul li a::after{
     content: '';
     width: 0%;
     height: 3px;
-    background: rgb(214, 161, 1);
+    background: rgb(255, 191, 0);
     position: absolute;
     left: 0%;
     bottom: -6px;
@@ -70,7 +70,7 @@ nav ul li a:hover::after{
     margin: 30px;
     margin-left: 0%;
     width: fit-content;
-    border: 1px solid rgb(214, 161, 1);
+    border: 3px solid rgb(214, 161, 1);
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -78,7 +78,12 @@ nav ul li a:hover::after{
     transition: background 0.5s;
 }
 .butn:hover{
+    
     background: rgb(214, 161, 1);
+}
+.butn:active{
+    background-color: #000000;
+    opacity: .4;
 }
 /*-------------about me--------------*/
 #about{
@@ -157,8 +162,8 @@ nav ul li a:hover::after{
     position: absolute;
     width: 10px;
     height: 10px;
-    background: #f1f1f1;
-    top: -20px;
+    background: #ffffff;
+    top: -16px;
     right: 0;
     transform: translateX(50%) rotate(45deg);
     border-radius: 2px;
@@ -198,6 +203,13 @@ nav ul li a:hover::after{
     margin-top: 20px;
     display: inline-block;
 }
+.services-list div p{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+}
 .services-list div:hover{
     background: rgb(214, 161, 1);
     transform: translateY(-10px);
@@ -206,7 +218,7 @@ nav ul li a:hover::after{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid rgb(214, 161, 1);
+    border: 2px solid rgb(214, 161, 1);
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -214,6 +226,10 @@ nav ul li a:hover::after{
     transition: background 0.5s;
 }
 .btn.btn2:hover{
+    background: rgb(214, 161, 1);
+
+}
+.btn.btn22:hover{
     background: rgb(214, 161, 1);
 
 }
@@ -365,7 +381,8 @@ form .btn.btn2{
     nav .fa-solid{
         margin-top: 20px;
         display: block;
-        font-size: 25px;
+        font-size: 25px; 
+        text-align: right;
       }
       nav ul{
         background: rgb(214, 161, 1);
