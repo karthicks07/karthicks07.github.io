@@ -21,10 +21,18 @@ body{
     padding: 10px 10%;
 }
 nav{
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.logo{
+    font-size: 37px;
+    margin-top: 10px;
+}
+.hello h1 span{
+    color: rgb(255, 191, 0);;
 }
 nav ul li{
     display: inline-block;
@@ -59,8 +67,9 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 .header-text h1 span{
-    color: rgb(214, 161, 1);
+    color: rgb(255, 191, 0);
 }
+
 .homesub{
     font-size: 28px;
 }
@@ -163,7 +172,7 @@ nav ul li a:hover::after{
     width: 10px;
     height: 10px;
     background: #ffffff;
-    top: -16px;
+    top: -17px;
     right: 0;
     transform: translateX(50%) rotate(45deg);
     border-radius: 2px;
@@ -187,11 +196,13 @@ nav ul li a:hover::after{
     font-weight: 300;
     transition: background 0.5s, transform 0.5s;
 }
+
 .services-list div i{
     font-size: 50px;
     margin-bottom: 30px;
 }
 .services-list div h2{
+    text-decoration: none;
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
@@ -365,6 +376,10 @@ form .btn.btn2{
   @media only screen and (max-width: 600px) {
     #header{
         background-image: url(images/backgroundimage1.jpg);
+    }
+    .logo{
+        font-size: 25px;
+        margin-top: 18px;
     }
     #skillss{
         padding-left: 20px;
