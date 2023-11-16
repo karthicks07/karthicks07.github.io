@@ -27,10 +27,7 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.logo{
-    font-size: 37px;
-    margin-top: 10px;
-}
+
 .hello h1 span{
     color: rgb(255, 191, 0);;
 }
@@ -73,6 +70,7 @@ nav ul li a:hover::after{
 .homesub{
     font-size: 28px;
 }
+
 .butn{
     display: block;
     font-size: 18px;
@@ -98,6 +96,9 @@ nav ul li a:hover::after{
 #about{
     padding: 80px 0; 
     color: #ababab;
+}
+.img{
+    filter: drop-shadow(-9px 8px 7px rgb(214, 161, 1));
 }
 .row{
     display: flex;
@@ -149,11 +150,12 @@ nav ul li a:hover::after{
     border-radius: 3px;
 }
 .skill-per{
+    
     height: 14px;
     background:rgb(214, 161, 1);
     border-radius: 3px;
     position: relative;
-    animation: fillBars 2.5s 1;
+    animation: ease-out 1s;
 }
 .skill-per::before{
     content: attr(per);
