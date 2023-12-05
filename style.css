@@ -310,49 +310,6 @@ form .btn.btn2{
     font-weight: 300;
     margin-top: 20px;
 }
-    
- .spinner {
-    --size: 100px;
-    --first-clr: #ffce3d;
-    --second-clr: #ffff;
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin-top: -25%;
-    margin-left: 70%;
-  }
-  
-  .spinner::before,
-  .spinner::after {
-    content: "";
-    width: var(--size);
-    height: var(--size);
-    border: 10px solid var(--first-clr);
-    position: absolute;
-    top: 50%;
-    left: calc(var(--size));
-    transform: translate(-50%, -50%);
-    animation: kf-spin 1s linear infinite;
-    border-radius: 50% 80% 50% 70%;
-    box-sizing: border-box;
-  }
-  
-  .spinner::after {
-    top: 50%;
-    left: calc(var(--size) * 2);
-    border: 10px solid var(--second-clr);
-    animation: kf-spin 1s linear infinite reverse;
-  }
-  
-  @keyframes kf-spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
   /*-----------responsive---------*/
   nav .fa-solid{
     display: none;
@@ -410,11 +367,6 @@ form .btn.btn2{
       }
       .homesub{
         font-size: 18px;
-      }
-      .spinner{
-        --size: 50px;
-        margin-left: 15%;
-        margin-top: -5%;
       }
       .about-col-1, .about-col-2{
         flex-basis: 100%;
