@@ -311,85 +311,48 @@ form .btn.btn2{
     margin-top: 20px;
 }
     
-  @keyframes rotate16 {
-    to {
+ .spinner {
+    --size: 100px;
+    --first-clr: #ffce3d;
+    --second-clr: #ffff;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-top: -25%;
+    margin-left: 70%;
+  }
+  
+  .spinner::before,
+  .spinner::after {
+    content: "";
+    width: var(--size);
+    height: var(--size);
+    border: 6px solid var(--first-clr);
+    position: absolute;
+    top: 50%;
+    left: calc(var(--size));
+    transform: translate(-50%, -50%);
+    animation: kf-spin 1s linear infinite;
+    border-radius: 50% 80% 50% 70%;
+    box-sizing: border-box;
+  }
+  
+  .spinner::after {
+    top: 50%;
+    left: calc(var(--size) * 2);
+    border: 6px solid var(--second-clr);
+    animation: kf-spin 1s linear infinite reverse;
+  }
+  
+  @keyframes kf-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
       transform: rotate(360deg);
     }
   }
-  .newtons-cradle {
-    --uib-size: 150px;
-    --uib-speed: 1.2s;
-    --uib-color: #ffffff;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: var(--uib-size);
-    height: var(--uib-size);
-    margin-left: 80%;
-    margin-top: -20%;
-   }
-   
-   .newtons-cradle__dot {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 25%;
-    transform-origin: center top;
-   }
-   
-   .newtons-cradle__dot::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 25%;
-    border-radius: 50%;
-    background-color: var(--uib-color);
-   }
-   
-   .newtons-cradle__dot:first-child {
-    animation: swing var(--uib-speed) linear infinite;
-   }
-   
-   .newtons-cradle__dot:last-child {
-    animation: swing2 var(--uib-speed) linear infinite;
-   }
-   
-   @keyframes swing {
-    0% {
-     transform: rotate(0deg);
-     animation-timing-function: ease-out;
-    }
-   
-    25% {
-     transform: rotate(70deg);
-     animation-timing-function: ease-in;
-    }
-   
-    50% {
-     transform: rotate(0deg);
-     animation-timing-function: linear;
-    }
-   }
-   
-   @keyframes swing2 {
-    0% {
-     transform: rotate(0deg);
-     animation-timing-function: linear;
-    }
-   
-    50% {
-     transform: rotate(0deg);
-     animation-timing-function: ease-out;
-    }
-   
-    75% {
-     transform: rotate(-70deg);
-     animation-timing-function: ease-in;
-    }
-   }
-   
+
   /*-----------responsive---------*/
   nav .fa-solid{
     display: none;
@@ -448,8 +411,10 @@ form .btn.btn2{
       .homesub{
         font-size: 18px;
       }
-      .newtons-cradle{
-        display: none;
+      .spinner{
+        --size: 50px;
+        margin-left: 15%;
+        margin-top: -5%;
       }
       .about-col-1, .about-col-2{
         flex-basis: 100%;
