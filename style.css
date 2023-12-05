@@ -225,7 +225,7 @@ nav ul li a:hover::after{
 }
 .services-list div:hover{
     background: rgb(214, 161, 1);
-    transform: translateY(-10px);
+    transform: translateY(-20px);
 }
 .btn{
     display: block;
@@ -310,67 +310,86 @@ form .btn.btn2{
     font-weight: 300;
     margin-top: 20px;
 }
-.svg-frame {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    transform-style: preserve-3d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .svg-frame svg {
-    position: absolute;
-    transition: .5s;
-    z-index: calc(1 - (0.2 * var(--j)));
-    transform-origin: center;
-    width: 344px;
-    height: 344px;
-    fill: none;
-  }
-  
-  .svg-frame:hover svg {
-    transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
-  }
-  
-  .svg-frame svg #center {
-    transition: .5s;
-    transform-origin: center;
-  }
-  
-  .svg-frame:hover svg #center {
-    transform: rotate(-30deg) translateX(45px) translateY(-3px);
-  }
-  
-  #out2 {
-    animation: rotate16 7s ease-in-out infinite alternate;
-    transform-origin: center;
-  }
-  
-  #out3 {
-    animation: rotate16 3s ease-in-out infinite alternate;
-    transform-origin: center;
-    stroke: #ff0;
-  }
-  
-  #inner3,
-  #inner1 {
-    animation: rotate16 4s ease-in-out infinite alternate;
-    transform-origin: center;
-  }
-  
-  #center1 {
-    fill: #ff0;
-    animation: rotate16 2s ease-in-out infinite alternate;
-    transform-origin: center;
-  }
-  
+    
   @keyframes rotate16 {
     to {
       transform: rotate(360deg);
     }
   }
+  .newtons-cradle {
+    --uib-size: 150px;
+    --uib-speed: 1.2s;
+    --uib-color: #ffffff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--uib-size);
+    height: var(--uib-size);
+    margin-left: 80%;
+    margin-top: -20%;
+   }
+   
+   .newtons-cradle__dot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+    transform-origin: center top;
+   }
+   
+   .newtons-cradle__dot::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 25%;
+    border-radius: 50%;
+    background-color: var(--uib-color);
+   }
+   
+   .newtons-cradle__dot:first-child {
+    animation: swing var(--uib-speed) linear infinite;
+   }
+   
+   .newtons-cradle__dot:last-child {
+    animation: swing2 var(--uib-speed) linear infinite;
+   }
+   
+   @keyframes swing {
+    0% {
+     transform: rotate(0deg);
+     animation-timing-function: ease-out;
+    }
+   
+    25% {
+     transform: rotate(70deg);
+     animation-timing-function: ease-in;
+    }
+   
+    50% {
+     transform: rotate(0deg);
+     animation-timing-function: linear;
+    }
+   }
+   
+   @keyframes swing2 {
+    0% {
+     transform: rotate(0deg);
+     animation-timing-function: linear;
+    }
+   
+    50% {
+     transform: rotate(0deg);
+     animation-timing-function: ease-out;
+    }
+   
+    75% {
+     transform: rotate(-70deg);
+     animation-timing-function: ease-in;
+    }
+   }
+   
   /*-----------responsive---------*/
   nav .fa-solid{
     display: none;
@@ -428,6 +447,9 @@ form .btn.btn2{
       }
       .homesub{
         font-size: 18px;
+      }
+      .newtons-cradle{
+        display: none;
       }
       .about-col-1, .about-col-2{
         flex-basis: 100%;
