@@ -17,7 +17,7 @@
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skillss">Skills</a></li>
-                    <li><a href="#services">Works</a></li> 
+                    <li><a href="#services">Works</a></li>
                     <li><a href="#services1">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
@@ -25,7 +25,7 @@
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                 <h1 class = "intro">Hi, I'm <span>K</span>arthick Senthil</h1>
+                 <h1 class = "intro">Hi, I'm <span class="karthick">Karthick Senthil </span></h1>
                  <p class="homesub intro">Passionate UI/UX Designer and Budding Frontend Developer,<br>Creating Intuitive Digital Experiences.</p>
                 <a href="#about" class="butn">Explore</a>
             </div>
@@ -242,6 +242,7 @@
         <p>Copyright &#169 karthick_senthil</p>
     </div>
 </div>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
     var sidemenu=document.getElementById("sidemenu");
     function openmenu(){
@@ -266,6 +267,15 @@
             form.reset()
         })
         .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  <script>
+    let typed = new Typed('.karthick',{
+        strings: ['Karthick Senthil', ' ', 'Karthick Senthil', ' ','Karthick Senthil', ' '],
+        typeSpeed: 70,
+        backSpeed: 70,
+        backDelay: 1200,
+        loop: true,
     })
   </script>
 </body>
