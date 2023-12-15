@@ -28,9 +28,7 @@ nav{
     flex-wrap: wrap;
 }
 
-.hello h1 span{
-    color: rgb(255, 191, 0);;
-}
+
 nav ul li{
     display: inline-block;
     list-style: none;
