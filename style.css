@@ -369,7 +369,9 @@ form .btn.btn2{
       }
       .about-col-1{
         margin-bottom: 30px;
-
+      }
+      .paragraph{
+          font-size:18px;
       }
       .about-col-2{
         font-size: 14px;
