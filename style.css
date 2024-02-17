@@ -121,6 +121,7 @@ nav ul li a:hover::after{
 }
 .paragraph{
     font-size: 20px;
+    text-align: justify;
 }
 
 /*------------skills-----------*/
