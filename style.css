@@ -360,6 +360,9 @@ form .btn.btn2{
       .homesub{
         font-size: 18px;
       }
+      #about{
+          padding: 0px;
+      }
       .about-col-1, .about-col-2{
         flex-basis: 100%;
       }
